@@ -1,0 +1,26 @@
+ul {
+    max-width: 600px;
+    width: 80%;
+}
+li {
+    background: #ededed none repeat scroll 0 0;
+    clear: both;
+    height: 200px;
+    list-style: outside none none;
+    padding: 20px;
+    width: 100%;
+}
+img {
+    float: left;
+    height: 100%;
+    width: auto;
+    max-width: 50%;
+}
+
+.movie-info {
+    color: #444;
+    float: left;
+    font-family: Arial,sans-serif;
+    max-width: 40%;
+    padding: 0 5%;
+}
