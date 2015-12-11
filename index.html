@@ -11,6 +11,16 @@
     <script src="js/controllers.js"></script>
   </head>
   <body>
+    <img src="img/satrap.png" alt="The Satrap logo" />
+    <h1>The Satrap</h1>
+    <p>
+      This is an early build of The Satrap; an upcoming site dedicated to review
+      and discuss all kinds of media.
+    </p>
+    <p>
+      As of now, the only working functionality is a search tool for movies
+      and tv shows.
+    </p>
     <div ng-controller="MoviesController">
       <input type="text" ng-model="movieTitle" ng-change="writeTitle(movieTitle)">
       <ul ng-repeat="item in movies">
