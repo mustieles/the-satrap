@@ -1,9 +1,47 @@
-/* line 1, ../scss/main.scss */
+@import "https://fonts.googleapis.com/css?family=EB+Garamond|Roboto:300,400,400i,700,900";
+/* line 12, ../scss/main.scss */
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #666666; }
+
+/* line 16, ../scss/main.scss */
+.small-size {
+  font-size: 12px; }
+
+/* line 19, ../scss/main.scss */
+.medium-size {
+  font-size: 14px; }
+
+/* line 22, ../scss/main.scss */
+.big-size {
+  font-size: 16px; }
+
+/* line 25, ../scss/main.scss */
+.extra-big-size {
+  font-size: 30px; }
+
+/* line 28, ../scss/main.scss */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%; }
+
+/* line 33, ../scss/main.scss */
+.col-6 {
+  width: 50%; }
+
+/* line 36, ../scss/main.scss */
+.centered-content {
+  margin: 0 auto;
+  text-align: center;
+  display: block; }
+
+/* line 41, ../scss/main.scss */
 ul {
   max-width: 600px;
   width: 80%; }
 
-/* line 5, ../scss/main.scss */
+/* line 45, ../scss/main.scss */
 li {
   background: #ededed none repeat scroll 0 0;
   clear: both;
@@ -12,14 +50,50 @@ li {
   padding: 20px;
   width: 100%; }
 
-/* line 13, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 img {
   float: left;
   height: 100%;
   width: auto;
   max-width: 50%; }
 
-/* line 19, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
+.main-title {
+  color: #666666;
+  font-family: "EB Garamond", serif;
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase; }
+  /* line 65, ../scss/main.scss */
+  .main-title span {
+    position: relative; }
+    /* line 67, ../scss/main.scss */
+    .main-title span::before {
+      background-image: url("../images/satrap.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: -10px;
+      content: "";
+      display: block;
+      height: 140px;
+      left: 0;
+      margin: 0 auto;
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      width: 160px;
+      z-index: -1; }
+
+/* line 86, ../scss/main.scss */
+.main-input {
+  width: 100%;
+  padding: 5px;
+  border-width: 0 0 1px 0;
+  border-color: #666666;
+  color: #666666; }
+
+/* line 93, ../scss/main.scss */
 .movie-info {
   color: #444;
   float: left;
@@ -27,74 +101,74 @@ img {
   max-width: 40%;
   padding: 0 5%; }
 
-/* line 26, ../scss/main.scss */
+/* line 100, ../scss/main.scss */
 .loader-container {
   width: 100%;
   height: 100%;
   padding-top: 50px;
   margin: 0 auto; }
 
-/* line 32, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 .movie-box {
   background-repeat: no-repeat;
   background-position: center;
   height: 50vh; }
 
-/* line 38, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 .movie-title {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   font-size: 18px; }
 
-/* line 44, ../scss/main.scss */
+/* line 117, ../scss/main.scss */
 .full-width {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px; }
 
-/* line 49, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 .ball {
   width: 10px;
   height: 10px;
   margin: 10px auto;
   border-radius: 50px; }
-  /* line 55, ../scss/main.scss */
+  /* line 128, ../scss/main.scss */
   .ball:nth-child(1) {
     background: #ff005d;
     -webkit-animation: right 1s infinite ease-in-out;
     -moz-animation: right 1s infinite ease-in-out;
     animation: right 1s infinite ease-in-out; }
-  /* line 62, ../scss/main.scss */
+  /* line 135, ../scss/main.scss */
   .ball:nth-child(2) {
     background: #35ff99;
     -webkit-animation: left 1.1s infinite ease-in-out;
     -moz-animation: left 1.1s infinite ease-in-out;
     animation: left 1.1s infinite ease-in-out; }
-  /* line 69, ../scss/main.scss */
+  /* line 142, ../scss/main.scss */
   .ball:nth-child(3) {
     background: #008597;
     -webkit-animation: right 1.05s infinite ease-in-out;
     -moz-animation: right 1.05s infinite ease-in-out;
     animation: right 1.05s infinite ease-in-out; }
-  /* line 76, ../scss/main.scss */
+  /* line 149, ../scss/main.scss */
   .ball:nth-child(4) {
     background: #ffcc00;
     -webkit-animation: left 1.15s infinite ease-in-out;
     -moz-animation: left 1.15s infinite ease-in-out;
     animation: left 1.15s infinite ease-in-out; }
-  /* line 83, ../scss/main.scss */
+  /* line 156, ../scss/main.scss */
   .ball:nth-child(5) {
     background: #2d3443;
     -webkit-animation: right 1.1s infinite ease-in-out;
     -moz-animation: right 1.1s infinite ease-in-out;
     animation: right 1.1s infinite ease-in-out; }
-  /* line 90, ../scss/main.scss */
+  /* line 163, ../scss/main.scss */
   .ball:nth-child(6) {
     background: #ff7c35;
     -webkit-animation: left 1.05s infinite ease-in-out;
     -moz-animation: left 1.05s infinite ease-in-out;
     animation: left 1.05s infinite ease-in-out; }
-  /* line 97, ../scss/main.scss */
+  /* line 170, ../scss/main.scss */
   .ball:nth-child(7) {
     background: #4d407c;
     -webkit-animation: right 1s infinite ease-in-out;

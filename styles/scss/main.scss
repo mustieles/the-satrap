@@ -1,3 +1,43 @@
+@import 'https://fonts.googleapis.com/css?family=EB+Garamond|Roboto:300,400,400i,700,900';
+
+$max-width: 1100px;
+
+$dark-gray: #666666;
+$small: 12px;
+$medium: 14px;
+$big: 16px;
+$extra-big: 30px;
+$title-size: 70px;
+
+p{
+  font-family: 'Roboto', sans-serif;
+  color: $dark-gray;
+}
+.small-size{
+  font-size: $small;
+}
+.medium-size{
+  font-size: $medium;
+}
+.big-size{
+  font-size: $big;
+}
+.extra-big-size{
+  font-size: $extra-big;
+}
+.wrapper{
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 100%;
+}
+.col-6{
+  width: 50%;
+}
+.centered-content{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
 ul {
     max-width: 600px;
     width: 80%;
@@ -15,6 +55,40 @@ img {
     height: 100%;
     width: auto;
     max-width: 50%;
+}
+.main-title{
+  color: $dark-gray;
+  font-family: "EB Garamond", serif;
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  span{
+    position: relative;
+    &::before{
+      background-image: url("../images/satrap.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: -10px;
+      content: "";
+      display: block;
+      height: 140px;
+      left: 0;
+      margin: 0 auto;
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      width: 160px;
+      z-index: -1;
+    }
+  }
+}
+.main-input{
+  width: 100%;
+  padding: 5px; 
+  border-width: 0 0 1px 0;
+  border-color: $dark-gray;
+  color: $dark-gray;
 }
 .movie-info {
     color: #444;
@@ -39,7 +113,6 @@ img {
   color: white;
   background: rgba(0,0,0,0.5);
   font-size: 18px;
-
 }
 .full-width{
   width: 100%;
