@@ -1,4 +1,8 @@
-      <input placeholder="search for a movie" class="centered-content main-input extra-big-size" type="text" ng-model="movieTitle" ng-change="changeLoader(); writeTitle(movieTitle)" ng-model-options="{ debounce: 500 }">
+      <input placeholder="start typing here to search for a movie" 
+        class="centered-content main-input extra-big-size" type="text"
+        ng-model="movieTitle" ng-change="changeLoader(); writeTitle(movieTitle)"
+        ng-model-options="{ debounce: 500 }">
+
       <div ng-show="showLoader" class="loader-container">
       	  <div class="ball"></div>
     		  <div class="ball"></div>
@@ -8,13 +12,14 @@
     		  <div class="ball"></div>
 		      <div class="ball"></div>
       </div>
-      <ul ng-repeat="item in movies">
-        <li>
-          <img ng-src="{{item.Poster}}" alt="Poster for {{item.Title}}" />
+      <ul class="movie-list centered-content" ng-hide="showLoader">
+        <li ng-repeat="item in movies">
+          <a ng-href="index.html#/movie/{{item.imdbID}}">
+            <div class="movie-thumb" style="background-image: url({{item.Poster}})"></div>
+          </a>
           <div class="movie-info">
-            <h2>{{item.Title}}</h2>
-            <h3>{{item.Year}}</h3>
-            <a ng-href="index.html#/movie/{{item.imdbID}}">View</a>
+            <a ng-href="index.html#/movie/{{item.imdbID}}"><h2>{{item.Title}}</h2></a>
+            <!--<a ng-href="index.html#/movie/{{item.imdbID}}"><h3>{{item.Year}}</h3></a>-->
           </div>
         </li>
       </ul>
