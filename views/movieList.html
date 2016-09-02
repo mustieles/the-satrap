@@ -1,0 +1,20 @@
+      <input type="text" ng-model="movieTitle" ng-change="changeLoader(); writeTitle(movieTitle)" ng-model-options="{ debounce: 500 }">
+      <div ng-show="showLoader" class="loader-container">
+      	  <div class="ball"></div>
+    		  <div class="ball"></div>
+    		  <div class="ball"></div>
+    		  <div class="ball"></div>
+    		  <div class="ball"></div>
+    		  <div class="ball"></div>
+		      <div class="ball"></div>
+      </div>
+      <ul ng-repeat="item in movies">
+        <li>
+          <img ng-src="{{item.Poster}}" alt="Poster for {{item.Title}}" />
+          <div class="movie-info">
+            <h2>{{item.Title}}</h2>
+            <h3>{{item.Year}}</h3>
+            <a ng-href="index.html#/movie/{{item.imdbID}}">View</a>
+          </div>
+        </li>
+      </ul>

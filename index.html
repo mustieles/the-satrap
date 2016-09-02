@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="theSatrap">
+<html ng-app="satrapApp">
   <head>
     <meta charset="utf-8">
     <title>The Satrap</title>
-    <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
-    <script src="lib/angular/angular.js" charset="utf-8"></script>
-    <script src="lib/angular/angular-route.min.js" charset="utf-8"></script>
-
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <link rel="stylesheet" href="styles/css/main.css" media="screen" charset="utf-8">
   </head>
   <body>
     <img src="img/satrap.png" alt="The Satrap logo" />
@@ -21,17 +16,16 @@
       As of now, the only working functionality is a search tool for movies
       and tv shows.
     </p>
-    <div ng-controller="MoviesController">
-      <input type="text" ng-model="movieTitle" ng-change="writeTitle(movieTitle)">
-      <ul ng-repeat="item in movies">
-        <li>
-          <img ng-src="{{item.Poster}}" alt="Poster for {{item.Title}}" />
-          <div class="movie-info">
-            <h2>{{item.Title}}</h2>
-            <h3>{{item.Year}}</h3>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <div ng-view=""></div>
+
+    <!-- lib components -->
+    <script src="scripts/libs/angular/angular.js" charset="utf-8"></script>
+    <script src="scripts/libs/angular/angular-route.min.js" charset="utf-8"></script>
+    
+    <!-- app components -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/movieList.js"></script>
+    <script src="scripts/controllers/movieItem.js"></script>
+
   </body>
 </html>
