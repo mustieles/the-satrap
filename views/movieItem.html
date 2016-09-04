@@ -1,15 +1,15 @@
 <div class="movie-box full-width">
 	<div class="poster-box">
 		<img ng-src="{{movie.Poster}}" />
-		<ul>
+	</div>
+	<div class="movie-details">
+		<ul class="small-size">
 			<li><span class="bold">Directed by:</span> {{movie.Director}}</li>
 			<li><span class="bold">Written by:</span> {{movie.Writer}}</li>
 			<li><span class="bold">Cast:</span> {{movie.Actors}}</li>
 			<li><span class="bold">Metascore:</span> {{movie.Metascore}}</li>
 			<li><span class="bold">RottenTomatoes:</span> {{movie.tomatoMeter}}</li>
 		</ul>
-	</div>
-	<div class="movie-details">
 		<h2 class="movie-title">{{movie.Title}} <span class="regular big-size">({{movie.Year}})</span></h2>
 		<span class="small-size">{{movie.Genre}} | {{movie.Runtime}}</span>
 		<div class="movie-plot">{{movie.Plot}}</div>
