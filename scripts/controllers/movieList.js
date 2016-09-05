@@ -18,6 +18,7 @@ angular.module('satrapApp')
 	      sets it to false 
 	    */
 	    $scope.showLoader = false;
+	    $scope.showError = false;
 	    
 	    /*
 	      Function changeLoader: sets the showLoader
@@ -35,9 +36,26 @@ angular.module('satrapApp')
 	    $scope.writeTitle = function(val){
 	      val = val.replace(/ /g, "+");
 	      var ajax_url = 'http://www.omdbapi.com/?s='+val+'*';
-	      $http.get(ajax_url).success(function(data) {
-	            $scope.movies = data.Search;
-	            $scope.showLoader = false;
-	      });
+	      
+	      $scope.showError = false;
+
+	      $http.get(ajax_url).then(
+	      		function(response) {
+	      			if(response.data.Response == "True"){
+	            		$scope.movies = response.data.Search;
+	            	}
+	            	else{
+	            		$scope.movies = '';
+	      				$scope.showError = true;
+	      				$scope.errorMessage = "No results."          		
+	            	}
+	            	$scope.showLoader = false;	  
+	      		},
+	      		function(response){
+	      			$scope.showError = true;
+	      			$scope.errorMessage = "There's been a problem, please check your Internet connexion and try again."
+	            	$scope.showLoader = false;	      
+	      		}
+	      );
 	    }
 	}]);

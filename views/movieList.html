@@ -12,6 +12,9 @@
     		  <div class="ball"></div>
 		      <div class="ball"></div>
       </div>
+      <div ng-show="showError">
+        <p>{{errorMessage}}</p>
+      </div>
       <ul class="movie-list centered-content" ng-hide="showLoader">
         <li ng-repeat="item in movies">
           <a ng-href="index.html#/movie/{{item.imdbID}}">

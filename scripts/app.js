@@ -11,7 +11,8 @@
 
 angular
 	.module('satrapApp', [
-    'ngRoute'
+    'ngRoute',
+    'ngResource'
 	])
 	.config(function ($routeProvider) {
 		$routeProvider
