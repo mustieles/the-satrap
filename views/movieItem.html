@@ -1,18 +1,39 @@
+<style>
+	.movie-box::before{
+		background-image: url('https://image.tmdb.org/t/p/w1066_and_h600_bestv2{{images.backdrops[0].file_path}}');
+	}
+</style>
 <div class="movie-box full-width">
 	<div class="poster-box">
-		<img ng-src="{{movie.Poster}}" />
+		<img ng-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}" />
 	</div>
 	<div class="movie-details">
 		<ul class="small-size">
-			<li><span class="bold">Directed by:</span> {{movie.Director}}</li>
-			<li><span class="bold">Written by:</span> {{movie.Writer}}</li>
-			<li><span class="bold">Cast:</span> {{movie.Actors}}</li>
-			<li><span class="bold">Metascore:</span> {{movie.Metascore}}</li>
-			<li><span class="bold">RottenTomatoes:</span> {{movie.tomatoMeter}}</li>
+			<!-- Needs groupBy custom filter - WIP -->
+			<li ng-repeat="tech in cast.crew | orderBy: job">
+				<span class="bold">{{tech.job}}:</span> {{tech.name}}
+			</li>
+			<!-- END WIP -->
+			<li>
+				<span class="bold">Cast: </span>
+				<span ng-repeat="actor in cast.actors | limitTo: 5 track by $index">
+					{{actor.name}}<span ng-if="$index != (cast.actors.length-1) && $index < 4">, </span>
+				</span>
+			</li>
 		</ul>
-		<h2 class="movie-title">{{movie.Title}} <span class="regular big-size">({{movie.Year}})</span></h2>
-		<span class="small-size">{{movie.Genre}} | {{movie.Runtime}}</span>
-		<div class="movie-plot">{{movie.Plot}}</div>
+		<h2 class="movie-title">{{movie.title}} <span class="regular big-size">({{movie.year}})</span></h2>
+		<ul class="small-size non-styled-list">
+			<li ng-repeat="genre in movie.genres track by $index">
+				{{genre.name}}<span ng-if="$index != (movie.genres.length-1)">, </span>
+			</li>
+		</ul>
+		 | <span class="small-size">{{movie.runtime}} min.</span>
+		<div class="movie-plot">{{movie.overview}}</div>
+		<!--
+		Needs trustYouTube custom servide - WIP
+		<iframe width="560" height="315" ng-src="{{video}}" frameborder="0" allowfullscreen></iframe>
+		END WIP
+		-->
 	</div>
 </div>
 <div class="back-button-holder">

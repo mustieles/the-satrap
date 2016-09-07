@@ -17,11 +17,11 @@
       </div>
       <ul class="movie-list centered-content" ng-hide="showLoader">
         <li ng-repeat="item in movies">
-          <a ng-href="index.html#/movie/{{item.imdbID}}">
-            <div class="movie-thumb" style="background-image: url({{item.Poster}})"></div>
+          <a ng-href="index.html#/movie/{{item.id}}">
+            <div class="movie-thumb" style="background-image: url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{item.poster_path}})"></div>
           </a>
           <div class="movie-info">
-            <a ng-href="index.html#/movie/{{item.imdbID}}"><h2>{{item.Title}}</h2></a>
+            <a ng-href="index.html#/movie/{{item.id}}"><h2>{{item.title}}</h2></a>
             <!--<a ng-href="index.html#/movie/{{item.imdbID}}"><h3>{{item.Year}}</h3></a>-->
           </div>
         </li>

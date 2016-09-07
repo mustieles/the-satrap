@@ -140,6 +140,20 @@ li {
 .movie-box{
   max-width: 960px;
   margin: 0 auto;
+  &::before{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0.15;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
   .poster-box{
     display: inline-block;
     width: 30%;
@@ -163,6 +177,18 @@ li {
       padding: 10px 20px;
       li{
         margin: 8px 0;
+      }
+      &.non-styled-list{
+        background: transparent;
+        color: black;
+        line-height: inherit;
+        padding: 0;
+        display: inline;
+        margin: 0;
+        li{
+          margin: 0;
+          display: inline;
+        }
       }
     }
     .movie-title{

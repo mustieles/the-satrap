@@ -35,14 +35,15 @@ angular.module('satrapApp')
 	    */
 	    $scope.writeTitle = function(val){
 	      val = val.replace(/ /g, "+");
-	      var ajax_url = 'http://www.omdbapi.com/?s='+val+'*';
+	      var ajax_url = 'http://api.themoviedb.org/3/search/movie?api_key=[API_KEY]&query='+val+'*';
 	      
 	      $scope.showError = false;
 
 	      $http.get(ajax_url).then(
 	      		function(response) {
-	      			if(response.data.Response == "True"){
-	            		$scope.movies = response.data.Search;
+	      			console.log(response);
+	      			if(response.data.total_results > 0){
+	            		$scope.movies = response.data.results;
 	            	}
 	            	else{
 	            		$scope.movies = '';
