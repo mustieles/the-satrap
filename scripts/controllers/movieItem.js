@@ -21,17 +21,17 @@ angular.module('satrapApp')
 		    $scope.movie = response.data;
 		    $scope.movie.year = response.data.release_date.split('-')[0];
 		}, function(){
-				$scope.showError = true;
-				$scope.errorMessage = "There's been a problem, please check your Internet connexion and try again."
+			$scope.showError = true;
+			$scope.errorMessage = "There's been a problem, please check your Internet connexion and try again."
 			$scope.showLoader = false;	      
 		});
 
 		//API call to get the credit info
 		ajax_url = 'http://api.themoviedb.org/3/movie/'+movieID+'/credits?api_key=[API_KEY]';
 		$http.get(ajax_url).then(function(response) {
-				$scope.cast = new Object();
-				$scope.cast.actors = new Array();
-				$scope.cast.crew = new Array();
+			$scope.cast = new Object();
+			$scope.cast.actors = new Array();
+			$scope.cast.crew = new Array();
 		    for (var actor of response.data.cast){
 		    	$scope.cast.actors.push(actor);
 		    }

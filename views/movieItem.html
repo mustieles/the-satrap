@@ -28,11 +28,7 @@
 		</ul>
 		 | <span class="small-size">{{movie.runtime}} min.</span>
 		<div class="movie-plot">{{movie.overview}}</div>
-		<!--
-		Needs trustYouTube custom servide - WIP
-		<iframe width="560" height="315" ng-src="{{video}}" frameborder="0" allowfullscreen></iframe>
-		END WIP
-		-->
+		<iframe width="560" height="315" ng-src="{{video | trusted}}" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 <div class="back-button-holder">
