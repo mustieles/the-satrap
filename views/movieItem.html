@@ -9,11 +9,10 @@
 	</div>
 	<div class="movie-details">
 		<ul class="small-size">
-			<!-- Needs groupBy custom filter - WIP -->
-			<li ng-repeat="tech in cast.crew | orderBy: job">
-				<span class="bold">{{tech.job}}:</span> {{tech.name}}
+			<li ng-repeat="(key, value) in cast.crew | groupByJob">
+				<span class="bold">{{key}}:</span> 
+				<span ng-repeat="tech in value track by $index">{{tech}}<span ng-if="$index != (value.length-1)">, </span></span>
 			</li>
-			<!-- END WIP -->
 			<li>
 				<span class="bold">Cast: </span>
 				<span ng-repeat="actor in cast.actors | limitTo: 5 track by $index">

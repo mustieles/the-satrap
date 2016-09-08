@@ -36,7 +36,8 @@ angular.module('satrapApp')
 		    	$scope.cast.actors.push(actor);
 		    }
 		    for (var tech of response.data.crew){
-		    	if(tech.department === 'Directing' || tech.department === 'Writing'){
+		    	if((tech.department === 'Directing' || tech.department === 'Writing') 
+		    		&& !(tech.job === 'Assistant Director' || tech.job === 'Script Supervisor' || tech.job === 'Layout')){
 		    		$scope.cast.crew.push(tech);
 		    	}
 		    }
