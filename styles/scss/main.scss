@@ -10,6 +10,26 @@ $big: 16px;
 $extra-big: 30px;
 $title-size: 70px;
 
+/* MEDIA QUERY */
+//240px 320px 480px 600px 768px 900px 1200px;
+$break-extra-small: 320px;
+$break-small: 480px;
+$break-medium: 768px;
+$break-medium: 800px;
+$break-slarge:1024px;
+$break-large: 1200px;
+
+$desktop: "(min-width:"$break-large")";
+$smalldesktop: "(min-width:"$break-medium ") and (max-width: "$break-large - 1")";
+$tablet: "(min-width:"$break-small") and (max-width: "$break-medium - 1")";
+$mobil:"(max-width: "$break-small")";
+$smallmobil:"(max-width: "$break-extra-small")";
+$landscape: "(orientation: landscape)";
+$portrait: "(orientation: portrait)";
+
+html{
+  min-height: 100%;
+}
 p{
   font-family: 'Ubuntu', sans-serif;
   color: $dark-gray;
@@ -33,9 +53,13 @@ p{
   font-weight: 600;
 }
 .wrapper{
-  max-width: $max-width;
+  max-width: 100%;
   margin: 0 auto;
-  width: 100%;
+  padding: 0 20px;
+  @media #{$desktop}{
+    max-width: $max-width;
+    width: 100%;
+  }
 }
 .col-6{
   width: 50%;
@@ -95,13 +119,27 @@ li {
   background: white;
   background-bottom: 50px;
   text-align: left;
+  @media #{$mobil}{
+    font-size: 16px;
+  }
+  @media #{$smallmobil}{
+    font-size: 15px;
+  }
 }
 .movie-list{
   li{
     display: block;
-    min-width: 300px;
     margin: 20px;
     text-align: left;
+    @media #{$mobil}{
+      margin: 20px 0;
+      text-align: center;
+    }
+    a{
+      @media #{$mobil}{
+        text-align: center;
+      }
+    }
     .movie-thumb{
       width: 130px;
       height: 200px;
@@ -118,6 +156,11 @@ li {
       font-family: "Gentium Book Basic",serif;
       text-align: left;
       vertical-align: middle;
+      @media #{$mobil}{
+        text-align: center;
+        padding: 0 20px;
+        display: block;
+      }
       a{
         color: black;
         text-decoration: none;
@@ -153,6 +196,7 @@ li {
     top: 0;
     left: 0;
     z-index: -1;
+    min-height: 100vh;
   }
   .poster-box{
     display: inline-block;
