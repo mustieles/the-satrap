@@ -211,7 +211,13 @@ li {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 186, ../scss/main.scss */
+@media (max-width: 799px) {
+  /* line 183, ../scss/main.scss */
+  .movie-box {
+    padding: 0 !important;
+  }
+}
+/* line 189, ../scss/main.scss */
 .movie-box::before {
   background-position: center center;
   background-repeat: no-repeat;
@@ -227,16 +233,22 @@ li {
   z-index: -1;
   min-height: 100vh;
 }
-/* line 201, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .movie-box .poster-box {
   display: inline-block;
   width: 30%;
 }
-/* line 204, ../scss/main.scss */
+@media (max-width: 799px) {
+  /* line 204, ../scss/main.scss */
+  .movie-box .poster-box {
+    width: 100%;
+  }
+}
+/* line 210, ../scss/main.scss */
 .movie-box .poster-box img {
   width: 100%;
 }
-/* line 208, ../scss/main.scss */
+/* line 214, ../scss/main.scss */
 .movie-box .movie-details {
   display: inline-block;
   font-family: 'Ubuntu', sans-serif;
@@ -244,7 +256,14 @@ li {
   margin-left: 4%;
   width: 65%;
 }
-/* line 214, ../scss/main.scss */
+@media (max-width: 799px) {
+  /* line 214, ../scss/main.scss */
+  .movie-box .movie-details {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/* line 224, ../scss/main.scss */
 .movie-box .movie-details ul {
   background: #fc2c32 none repeat scroll 0 0;
   color: white;
@@ -254,11 +273,17 @@ li {
   margin-top: 0;
   padding: 10px 20px;
 }
-/* line 222, ../scss/main.scss */
+@media (max-width: 799px) {
+  /* line 224, ../scss/main.scss */
+  .movie-box .movie-details ul {
+    margin-right: 0;
+  }
+}
+/* line 235, ../scss/main.scss */
 .movie-box .movie-details ul li {
   margin: 8px 0;
 }
-/* line 225, ../scss/main.scss */
+/* line 238, ../scss/main.scss */
 .movie-box .movie-details ul.non-styled-list {
   background: transparent;
   color: black;
@@ -267,31 +292,37 @@ li {
   display: inline;
   margin: 0;
 }
-/* line 232, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 .movie-box .movie-details ul.non-styled-list li {
   margin: 0;
   display: inline;
 }
-/* line 238, ../scss/main.scss */
+/* line 251, ../scss/main.scss */
 .movie-box .movie-details .movie-title {
   color: black;
   font-family: 'Gentium Book Basic', serif;
   margin: 0 0 5px;
   font-size: 28px;
 }
-/* line 244, ../scss/main.scss */
+/* line 257, ../scss/main.scss */
 .movie-box .movie-details .movie-plot {
   margin: 20px 0;
   line-height: 25px;
 }
+@media (max-width: 799px) {
+  /* line 263, ../scss/main.scss */
+  .movie-box iframe {
+    width: 100%;
+  }
+}
 
-/* line 251, ../scss/main.scss */
+/* line 269, ../scss/main.scss */
 .back-button-holder {
   margin: 20px;
   text-align: right;
   position: relative;
 }
-/* line 255, ../scss/main.scss */
+/* line 273, ../scss/main.scss */
 .back-button-holder a {
   color: black;
   text-decoration: none;
@@ -299,12 +330,12 @@ li {
   font-family: 'Gentium Book Basic', serif;
   padding: 0 10px;
 }
-/* line 261, ../scss/main.scss */
+/* line 279, ../scss/main.scss */
 .back-button-holder a:hover {
   background-color: #fc2c32;
   color: white;
 }
-/* line 266, ../scss/main.scss */
+/* line 284, ../scss/main.scss */
 .back-button-holder ::after {
   background-image: url("../images/satrap.png");
   background-position: center center;
@@ -322,63 +353,63 @@ li {
   z-index: -1;
 }
 
-/* line 283, ../scss/main.scss */
+/* line 301, ../scss/main.scss */
 .full-width {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 288, ../scss/main.scss */
+/* line 306, ../scss/main.scss */
 .ball {
   width: 10px;
   height: 10px;
   margin: 10px auto;
   border-radius: 50px;
 }
-/* line 294, ../scss/main.scss */
+/* line 312, ../scss/main.scss */
 .ball:nth-child(1) {
   background: #ff005d;
   -webkit-animation: right 1s infinite ease-in-out;
   -moz-animation: right 1s infinite ease-in-out;
   animation: right 1s infinite ease-in-out;
 }
-/* line 301, ../scss/main.scss */
+/* line 319, ../scss/main.scss */
 .ball:nth-child(2) {
   background: #35ff99;
   -webkit-animation: left 1.1s infinite ease-in-out;
   -moz-animation: left 1.1s infinite ease-in-out;
   animation: left 1.1s infinite ease-in-out;
 }
-/* line 308, ../scss/main.scss */
+/* line 326, ../scss/main.scss */
 .ball:nth-child(3) {
   background: #008597;
   -webkit-animation: right 1.05s infinite ease-in-out;
   -moz-animation: right 1.05s infinite ease-in-out;
   animation: right 1.05s infinite ease-in-out;
 }
-/* line 315, ../scss/main.scss */
+/* line 333, ../scss/main.scss */
 .ball:nth-child(4) {
   background: #ffcc00;
   -webkit-animation: left 1.15s infinite ease-in-out;
   -moz-animation: left 1.15s infinite ease-in-out;
   animation: left 1.15s infinite ease-in-out;
 }
-/* line 322, ../scss/main.scss */
+/* line 340, ../scss/main.scss */
 .ball:nth-child(5) {
   background: #2d3443;
   -webkit-animation: right 1.1s infinite ease-in-out;
   -moz-animation: right 1.1s infinite ease-in-out;
   animation: right 1.1s infinite ease-in-out;
 }
-/* line 329, ../scss/main.scss */
+/* line 347, ../scss/main.scss */
 .ball:nth-child(6) {
   background: #ff7c35;
   -webkit-animation: left 1.05s infinite ease-in-out;
   -moz-animation: left 1.05s infinite ease-in-out;
   animation: left 1.05s infinite ease-in-out;
 }
-/* line 336, ../scss/main.scss */
+/* line 354, ../scss/main.scss */
 .ball:nth-child(7) {
   background: #4d407c;
   -webkit-animation: right 1s infinite ease-in-out;

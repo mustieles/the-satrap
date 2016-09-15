@@ -26,7 +26,7 @@ $mobil:"(max-width: "$break-small")";
 $smallmobil:"(max-width: "$break-extra-small")";
 $landscape: "(orientation: landscape)";
 $portrait: "(orientation: portrait)";
-
+$tablet_mobil: "(max-width: "$break-medium - 1")";
 html{
   min-height: 100%;
 }
@@ -183,6 +183,9 @@ li {
 .movie-box{
   max-width: 960px;
   margin: 0 auto;
+  @media #{$tablet_mobil}{
+    padding: 0 !important;
+  }
   &::before{
     background-position: center center;
     background-repeat: no-repeat;
@@ -201,6 +204,9 @@ li {
   .poster-box{
     display: inline-block;
     width: 30%;
+    @media #{$tablet_mobil}{
+      width: 100%;
+    }
     img{
       width: 100%;
     }
@@ -211,6 +217,10 @@ li {
     vertical-align: top;
     margin-left: 4%;
     width: 65%;
+    @media #{$tablet_mobil}{
+      width: 100%;
+      margin-left: 0;
+    }
     ul{
       background: #fc2c32 none repeat scroll 0 0;
       color: white;
@@ -219,6 +229,9 @@ li {
       margin-right: 30px;
       margin-top: 0;
       padding: 10px 20px;
+      @media #{$tablet_mobil}{
+        margin-right: 0;
+      }
       li{
         margin: 8px 0;
       }
@@ -245,6 +258,11 @@ li {
       margin: 20px 0;
       
       line-height: 25px;
+    }
+  }
+  iframe{
+    @media #{$tablet_mobil} {
+    width: 100%;
     }
   }
 }
